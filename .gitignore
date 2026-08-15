@@ -1,0 +1,17 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+DATA/resumes/
+DATA/matching_results/
+DATA/shortlist_results/
+DATA/fraud_detection/
+DATA/final_screening/
+
+*.csv
+*.log
+
+.env
+.streamlit/secrets.toml
