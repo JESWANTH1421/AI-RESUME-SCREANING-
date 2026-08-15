@@ -4,7 +4,7 @@
 
 🔗 **Live Demo:** YOUR_LIVE_DEMO_LINK_HERE
 
-🔗 **GitHub Repository:** YOUR_GITHUB_REPOSITORY_LINK_HERE
+🔗 **GitHub Repository:** [YOUR_GITHUB_REPOSITORY_LINK_HERE](https://github.com/JESWANTH1421/AI-RESUME-SCREANING-/tree/main)
 
 ---
 
