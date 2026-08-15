@@ -1,67 +1,119 @@
-# TalentLens — NLP Recruitment Intelligence System
+# 🚀 TalentLens — NLP-Based AI Recruitment Screening System
 
-<p align="center">
+> An intelligent recruitment screening platform that uses Natural Language Processing (NLP) to compare Job Descriptions (JDs) with resumes, rank candidates, detect hidden-text resume manipulation, generate explanations, and perform what-if candidate analysis.
 
-### AI-Powered Resume Screening, Ranking & Fraud Detection
+🔗 **Live Demo:** YOUR_LIVE_DEMO_LINK_HERE
 
-An NLP-based recruitment screening system that helps recruiters evaluate multiple resumes against a Job Description (JD), rank candidates, detect hidden-text resume manipulation, explain decisions, and simulate "What-If" hiring scenarios.
-
-</p>
+🔗 **GitHub Repository:** YOUR_GITHUB_REPOSITORY_LINK_HERE
 
 ---
 
-## 🚀 Live Demo
+## 📌 Overview
 
-🔗 **Live Application:**  
-https://YOUR-LIVE-STREAMLIT-LINK.streamlit.app
+TalentLens is an NLP-based recruitment intelligence system designed to automate the initial resume screening process.
 
-🔗 **GitHub Repository:**  
-https://github.com/YOUR-GITHUB-USERNAME/TalentLens-NLP-Recruitment
+Recruiters can:
 
-> The live application allows recruiters to upload resumes and provide a Job Description directly through the interface.
+- Upload multiple resumes
+- Enter or upload a Job Description
+- Extract relevant information from resumes and the JD
+- Calculate candidate-to-JD similarity
+- Match required skills
+- Evaluate experience and qualifications
+- Rank candidates
+- Generate a Top-K shortlist
+- Detect hidden/white-text resume manipulation
+- Block suspicious candidates from final screening
+- Generate candidate-specific explanations
+- Perform "What-If" analysis by modifying candidate skills
+- View all results through an interactive Streamlit dashboard
 
----
-
-# 📌 Overview
-
-Recruiters often need to screen hundreds of resumes for a single job opening.
-
-Traditional resume screening can be:
-
-- Time-consuming
-- Inconsistent
-- Difficult to scale
-- Dependent on manual keyword matching
-- Vulnerable to keyword stuffing
-- Difficult to explain
-
-**TalentLens** addresses these problems using a structured NLP-based recruitment pipeline.
-
-The system analyzes resumes against a Job Description and produces:
-
-- Candidate match scores
-- Skill matching
-- Missing skills
-- Experience matching
-- Qualification matching
-- Candidate ranking
-- Top-K shortlisting
-- Explainable screening decisions
-- Hidden/white-text fraud detection
-- Fraud-aware final screening
-- What-If candidate simulation
+The system is designed as an **explainable and fraud-aware NLP recruitment pipeline**.
 
 ---
 
-# 🎯 Key Features
+# 🎯 Problem Statement
 
-## 1. Resume Upload
+Traditional resume screening can become difficult when recruiters receive hundreds of resumes for a single job.
 
-Recruiters can upload multiple PDF resumes directly through the application.
+Common problems include:
+
+- Manual resume screening is time-consuming
+- Keyword-based ATS systems may miss semantic relationships
+- Candidates may manipulate resumes using hidden/white text
+- Recruiters may not understand why a candidate received a particular score
+- Comparing large numbers of candidates manually is inefficient
+- Recruiters cannot easily simulate how adding/removing skills would affect a candidate's score
+
+TalentLens addresses these problems using an automated NLP pipeline.
+
+---
+
+# 💡 Proposed Solution
+
+TalentLens processes resumes through multiple stages:
 
 ```text
-Upload Resume PDFs
-        ↓
-Extract Resume Text
-        ↓
-NLP Processing
+                ┌───────────────────┐
+                │   Job Description  │
+                └─────────┬─────────┘
+                          │
+                          ▼
+                ┌───────────────────┐
+                │ JD Processing     │
+                │ & Skill Extraction│
+                └─────────┬─────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────┐
+│               Resume Upload                 │
+│          Multiple PDF Resumes               │
+└─────────────────────┬───────────────────────┘
+                      │
+                      ▼
+             ┌───────────────────┐
+             │ Resume Processing │
+             └─────────┬─────────┘
+                       │
+                       ▼
+             ┌───────────────────┐
+             │ NLP Matching      │
+             │                   │
+             │ TF-IDF            │
+             │ Cosine Similarity │
+             │ Skill Matching    │
+             │ Experience        │
+             │ Qualification     │
+             └─────────┬─────────┘
+                       │
+                       ▼
+             ┌───────────────────┐
+             │ Candidate Ranking │
+             └─────────┬─────────┘
+                       │
+                       ▼
+             ┌───────────────────┐
+             │ Top-K Shortlisting│
+             └─────────┬─────────┘
+                       │
+                       ▼
+             ┌───────────────────┐
+             │ Fraud Detection   │
+             │                   │
+             │ Hidden Text       │
+             │ White Text        │
+             │ Tiny Text         │
+             │ Transparent Text  │
+             └─────────┬─────────┘
+                       │
+                       ▼
+             ┌───────────────────┐
+             │ Final Screening   │
+             └─────────┬─────────┘
+                       │
+                       ▼
+             ┌───────────────────┐
+             │ Explanation       │
+             │ + What-If Analysis│
+             └───────────────────┘
+
